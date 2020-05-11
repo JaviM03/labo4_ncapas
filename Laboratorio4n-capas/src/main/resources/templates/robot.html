@@ -3,18 +3,22 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Seguridad</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+
 </head>
 <body> 
+<div class="formulario">
 <form th:action="@{/seguridad}" th:object ="${robot}" method="post">
 
 	<label> Marcar solo si usted es un robot</label>
 	<input type="radio" th:field="*{soyRobot}" th:value ="${false}">
 	<span th:errors="*{soyRobot}" style =color:#E81505></span><br>
 	
-	<input type="submit" value ="Aceptar">
+	<input type="submit" value ="Aceptar"  class="aceptar">
 </form>
-
-<a href="/producto">Regresar</a>
+<br>
+<a href="/producto" class="aceptar">Regresar</a>
+</div>
 
 </body>
 </html>
